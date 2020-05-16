@@ -1,67 +1,59 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import React from "react";
 
 export default function Home() {
-  return (
-    <div className="container">
-      <Head>
-        <title>Danna</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    return (
+        <div className="container">
+            <Head>
+                <title>Daana</title>
+                <link rel="icon" href="/favicon.ico"/>
+            </Head>
 
-      <main>
-        <h1 className="title">
-        Check out <Link href="/posts/first"><a>this page!</a></Link>
+            <main>
+                <h1 className="title">
+                    Meet <Link href="/posts/first"><a>Daana.</a></Link>
 
-        </h1>
+                </h1>
 
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+                <p className="description">
+                    Are you a <span className={"donor"}>Donor</span> or <span className={"receiver"}>Receiver</span>?
+                </p>
 
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+                <div className="grid">
+                    <a href="https://nextjs.org/learn" className="cardReceiver">
+                        <h3>Receiver &rarr;</h3>
+                        <ul>
+                            <li><p>Provide a statement for each cent of money it deducts from your account, proved by
+                                the
+                                consensus system.</p></li>
+                            <li><p>Maintain the details of all such pools</p></li>
+                            <li><p>Initiate a new pool of donation drive.</p></li>
+                        </ul>
+                    </a>
 
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+                    <a href="https://nextjs.org/docs" className="cardDonor">
+                        <h3>Donor &rarr;</h3>
+                        <ul>
+                            <li><p>Make donation to an organization from the list displayed.</p></li>
+                            <li><p>Visualize the details of all such pools</p></li>
+                            <li><p>Easy pay a certain amount of funds from your account to the selected organisation’s
+                                account.</p></li>
+                            <li><p>List all the donations made and display it's actual usage.</p></li>
+                        </ul>
+                    </a>
 
-          <a
-            href="https://github.com/zeit/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+                </div>
+            </main>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+            <footer>
+                <a>
+                    A project for{' '}
+                    <img src="/hackthechain.png" alt="Hack the Chain Logo" className="logo"/>
+                </a>
+            </footer>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-      </footer>
-
-      <style jsx>{`
+            <style jsx>{`
         .container {
           min-height: 100vh;
           padding: 0 0.5rem;
@@ -72,7 +64,7 @@ export default function Home() {
         }
 
         main {
-          padding: 5rem 0;
+          padding: 7rem 0;
           flex: 1;
           display: flex;
           flex-direction: column;
@@ -97,6 +89,7 @@ export default function Home() {
           display: flex;
           justify-content: center;
           align-items: center;
+          font-size: 18px;
         }
 
         a {
@@ -105,7 +98,7 @@ export default function Home() {
         }
 
         .title a {
-          color: #0070f3;
+          color: #f36900;
           text-decoration: none;
         }
 
@@ -145,12 +138,12 @@ export default function Home() {
           align-items: center;
           justify-content: center;
           flex-wrap: wrap;
-
-          max-width: 800px;
+           
+          max-width: 1000px;
           margin-top: 3rem;
         }
 
-        .card {
+        .cardReceiver {
           margin: 1rem;
           flex-basis: 45%;
           padding: 1.5rem;
@@ -161,27 +154,71 @@ export default function Home() {
           border-radius: 10px;
           transition: color 0.15s ease, border-color 0.15s ease;
         }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
+        
+        .cardDonor {
+          margin: 1rem;
+          flex-basis: 45%;
+          padding: 1.5rem;
+          text-align: left;
+          color: inherit;
+          text-decoration: none;
+          border: 1px solid #eaeaea;
+          border-radius: 10px;
+          transition: color 0.15s ease, border-color 0.15s ease;
         }
-
-        .card h3 {
+       
+        .cardDonor:hover,
+        .cardDonor:focus,
+        .cardDonor:active {
+          color: #29f300;
+          border-color: #29f300;
+        }
+        
+        .cardReceiver:hover,
+        .cardReceiver:focus,
+        .cardReceiver:active {
+          color: #9600f3;
+          border-color: #9600f3;
+        }
+        
+        .cardReceiver h3{
           margin: 0 0 1rem 0;
           font-size: 1.5rem;
         }
 
-        .card p {
+        .cardReceiver p{
           margin: 0;
           font-size: 1.25rem;
           line-height: 1.5;
         }
+        
+        .cardDonor h3{
+          margin: 0 0 1rem 0;
+          font-size: 1.5rem;
+        }
+
+        .cardDonor p{
+          margin: 0;
+          font-size: 1.25rem;
+          line-height: 1.5;
+        }
+        
+       .donor:hover,
+        .donor:focus,
+        .donor:active {
+          color: #29f300;
+          border-color: #29f300;
+        }
+        
+       .receiver:hover,
+        .receiver:focus,
+        .receiver:active {
+          color: #9600f3;
+          border-color: #9600f3;
+        }
 
         .logo {
-          height: 1em;
+          height: 2em;
         }
 
         @media (max-width: 600px) {
@@ -192,7 +229,7 @@ export default function Home() {
         }
       `}</style>
 
-      <style jsx global>{`
+            <style jsx global>{`
         html,
         body {
           padding: 0;
@@ -205,7 +242,8 @@ export default function Home() {
         * {
           box-sizing: border-box;
         }
+    
       `}</style>
-    </div>
-  )
+        </div>
+    )
 }
