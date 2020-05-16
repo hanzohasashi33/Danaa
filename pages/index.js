@@ -48,7 +48,8 @@ export default function Home() {
 
             <footer>
                 <a>
-                    A project for{' '}
+                    <img src="/logo-daana.png" alt="Daana Logo" className="logo"/>
+                    - a project for {' '}
                     <img src="/hackthechain.png" alt="Hack the Chain Logo" className="logo"/>
                 </a>
             </footer>
