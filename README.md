@@ -3,7 +3,6 @@
 
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
 
 One to two paragraph statement about your product and what it does.
 
@@ -14,15 +13,13 @@ One to two paragraph statement about your product and what it does.
 
 OS X & Linux:
 
-```sh
-npm install my-crazy-module --save
-```
+npm install
+npm run dev
 
 Windows:
 
-```sh
-edit autoexec.bat
-```
+npm install
+npm run dev
 
 ## Usage example
 Creating a donation/charity portal to solve the issue of scams, where funds are misused.
