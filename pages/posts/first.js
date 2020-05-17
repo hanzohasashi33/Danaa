@@ -55,9 +55,10 @@ export default function FirstPost() {
   return (
     <>
     <Head>
-      <title>My post</title>
+      <title>Daana</title>
     </Head>
-      <h1>First Post</h1>
+      <h1>Daana</h1>
+        <p>Charity portal to solve the issue of scams, where funds are misused.</p>
       <h2>
         <Link href="/">
           <a>Back to home</a>
