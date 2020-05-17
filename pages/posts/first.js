@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Head from 'next/head'
-import { Client } from "@hashgraph/sdk";
+import { Client,CryptoTransferTransaction } from "@hashgraph/sdk";
 import {OPERATOR_ID,OPERATOR_KEY} from "../keys";
 
 export default function FirstPost() {
@@ -36,20 +36,20 @@ export default function FirstPost() {
    console.log("account balance:", currentBalance);
  })();
 
-//  (async function() {
-//   console.log("balance before transfer:", (await client.getAccountBalance(operatorAccountId)));
+ (async function() {
+  console.log("balance before transfer:", (await client.getAccountBalance(operatorAccountId)));
 
-//   const receipt = await (await new CryptoTransferTransaction()
-//       .addSender(operatorAccountId, 1)
-//       .addRecipient("0.0.3", 1)
-//       .setTransactionMemo("sdk example")
-//       .execute(client))
-//       .getReceipt(client);
+  const receipt = await (await new CryptoTransferTransaction()
+      .addSender(operatorAccountId, 1)
+      .addRecipient("0.0.3", 1)
+      .setTransactionMemo("sdk example")
+      .execute(client))
+      .getReceipt(client);
 
-//   console.log(receipt);
-//   console.log("balance after transfer:", (await client.getAccountBalance(operatorAccountId)));
+  console.log(receipt);
+  console.log("balance after transfer:", (await client.getAccountBalance(operatorAccountId)));
 
-// }());
+}());
 
 
   return (
