@@ -29,7 +29,7 @@ export default function DonorDashboard() {
             <h3>Make New Donation &rarr;</h3>
             <ul>
               <li>
-                <p>Make Donation to an organisation from the list displayed</p>
+                <p>Make Donation to an organisation from the list displayed.</p>
               </li>
             </ul>
           </a>
@@ -38,7 +38,10 @@ export default function DonorDashboard() {
             <h3>History &rarr;</h3>
             <ul>
               <li>
-                <p>View history of donations</p>
+                <p>View history of donations.</p>
+              </li>
+              <li>
+                <p>Track the usage of your contribution.</p>
               </li>
             </ul>
           </a>
